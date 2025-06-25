@@ -1,0 +1,33 @@
+.pagination > .disabled > a, .pagination > .disabled > a:hover, .pagination > .disabled > a:focus, .pagination > li:last-child > a, .pagination > li:first-child > span, .pagination .prev a, .pagination .next span {
+    border: 1px solid;
+    background: transparent;
+    border-radius: 5px;
+}
+
+.pagination > .disabled > span, .pagination > .disabled > span:hover, .pagination > .disabled > span:focus {
+    background: transparent;
+}
+
+.pagination > li > a, .pagination > li > span {
+    color: black;
+    font-weight: 500;
+    background: transparent;
+    border: none;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    color: #428bca;
+    background: transparent;
+    border: none;
+}
+
+.pagination span, .pagination a {
+    padding: 4px 8px;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
