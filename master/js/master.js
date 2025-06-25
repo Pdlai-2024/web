@@ -152,7 +152,7 @@ function checkDomain() {
     //window.location.href = "https://example.com";
     // Kiểm tra xem tên miền hiện tại có trong danh sách cho phép
 
-    if (currentDomain != '118.70.236.153') {
+    if (currentDomain != 'pdlai-2024.github.io') {
         // Làm mờ toàn bộ nội dung trang
         window.location.href = "https://example.com";
         document.body.style.filter = 'blur(5px)';
