@@ -4221,7 +4221,7 @@
   const dalogin = getParam('dalogin');
 
 if (dalogin && dalogin.trim() !== '') {
-  document.getElementById('xinchao').textContent = dalogin;
+  document.getElementsByClassName('xinchao').textContent = dalogin;
 
   Array.from(document.getElementsByClassName('checklogin')).forEach(el => {
     el.style.display = "none";
