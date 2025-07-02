@@ -29,6 +29,7 @@
     <script src="./master/js/swiper-bundle.min.js?v=1733197564"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <script src='//cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js'></script>
+    <style>.checklogin .checklogin_ok{display:none}
 </head>
 
 <body>
@@ -133,13 +134,20 @@
                             </a>
                         </div>
 
-                        <div class="my-auto">
+                            
+                        <div class="my-auto checklogin">
                             <a class="block font-bold" target="_blank" href="https://hocvienungdungai.com/signin?redirect=https%3A%2F%2Fhocvienungdungai.com%2F">Đăng nhập</a>
                         </div>
-                        <div class="my-auto p-3 text-white bg-[#1782FB] rounded font-bold">
+                        <div class="my-auto p-3 text-white bg-[#1782FB] rounded font-bold checklogin">
                             <a class="block" target="_blank" href="https://hocvienungdungai.com/signin?redirect=https%3A%2F%2Fhocvienungdungai.com%2F">Đăng ký</a>
                         </div>
 
+                       <div class="my-auto p-3 text-white bg-[#1782FB] rounded font-bold checklogin_ok">
+                            <a class="block" target="_blank" href="https://hocvienungdungai.com/my-courses">Khóa học của tôi</a>
+                        </div>
+                       <div class="my-auto p-3 checklogin_ok">
+                            <a class="block xinchao"></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -189,12 +197,20 @@
     <div id="drawer-left-navbar" class="fixed top-0 left-0 z-40 transition-transform -translate-x-full w-96" tabindex="-1" aria-labelledby="drawer-left-label">
         <div class="w-80 bg-white h-screen overflow-y-auto">
             <div class="border-t p-4 text-[#BF4A01]">
-                <div class="mt-2">
+                <div class="mt-2 checklogin ">
                     <a class="block"  target="_blank" href="https://hocvienungdungai.com/signin?redirect=https%3A%2F%2Fhocvienungdungai.com%2F">Đăng nhập</a>
                 </div>
-                <div class="my-4">
+                <div class="my-4 checklogin ">
                     <a class="block" target="_blank" href="https://hocvienungdungai.com/signin?redirect=https%3A%2F%2Fhocvienungdungai.com%2F">Đăng ký</a>
                 </div>
+
+                 <div class="mt-2 checklogin_ok">
+                            <a class="block" target="_blank" href="https://hocvienungdungai.com/my-courses">Khóa học của tôi</a>
+                        </div>
+                       <div class="mt-2 checklogin_ok">
+                            <a class="block xinchao"></a>
+                        </div>
+                
             </div>
             <div class="border-t p-4">
                 <div class="mt-2">
@@ -4194,8 +4210,39 @@
             if (!fab.contains(e.target)) fab.classList.remove('active');
         });
     </script>
-    // Thêm đoạn này vào cuối file, trước
-</body> hoặc sau phần render khóa học
+<script>
+  
+  function getParam(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+  }
+
+ 
+  const dalogin = getParam('dalogin');
+
+if (dalogin && dalogin.trim() !== '') {
+  document.getElementById('xinchao').textContent = dalogin;
+
+  Array.from(document.getElementsByClassName('checklogin')).forEach(el => {
+    el.style.display = "none";
+  });
+
+  Array.from(document.getElementsByClassName('checklogin_ok')).forEach(el => {
+    el.style.display = "block";
+  });
+
+} else {
+ 
+  Array.from(document.getElementsByClassName('checklogin')).forEach(el => {
+    el.style.display = "block";
+  });
+  Array.from(document.getElementsByClassName('checklogin_ok')).forEach(el => {
+    el.style.display = "none";
+  });
+}
+</script>
+
+    
 <script>
     // ====== TỰ ĐỘNG LẤY DATA KHÓA HỌC TỪ HTML ======
     function getCoursesFromDOM() {
