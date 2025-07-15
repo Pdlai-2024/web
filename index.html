@@ -34,6 +34,10 @@
         .checklogin_ok {
             display: none
         }
+
+        div#news-section h3 {
+            min-height: 60px;
+        }
     </style>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
@@ -180,12 +184,12 @@
 
 
                         <div class="my-auto checklogin">
-                            <a class="block font-bold" target="_blank"
+                            <a class="block font-bold" 
                                 href="https://hocvienungdungai.com/signin?redirect=https%3A%2F%2Fhocvienungdungai.com%2F">Đăng
                                 nhập</a>
                         </div>
                         <div class="my-auto p-3 text-white bg-[#1782FB] rounded font-bold checklogin">
-                            <a class="block" target="_blank"
+                            <a class="block" 
                                 href="https://hocvienungdungai.com/signin?redirect=https%3A%2F%2Fhocvienungdungai.com%2F">Đăng
                                 ký</a>
                         </div>
@@ -194,31 +198,39 @@
                             <a class="block" target="_blank" href="https://hocvienungdungai.com/my-courses">Khóa học của
                                 tôi</a>
                         </div>
-                        
 
-<div class="mt-2 checklogin_ok" style="position:relative;">
-    <a class="block xinchao" href="javascript:void(0)" style="font-weight:bold;"> 
-    </a>
-    <div class="dropdown-menu dropdown-info-user show" style="display:none;position:absolute;top:100%;left:-60px;min-width:180px;z-index:999;background:#fff;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,0.08);padding:8px 0;">
-        <a class="dropdown-item" target="_blank" href="https://hocvienungdungai.com/update-profile" style="padding:8px 20px;display:block;">Hồ sơ</a>
-        <a class="dropdown-item" target="_blank" href="https://hocvienungdungai.com/list-test-result" style="padding:8px 20px;display:block;">Kết quả BKT</a>
-        <a class="dropdown-item" target="_blank" href="https://hocvienungdungai.com/affiliate/dashboard" style="padding:8px 20px;display:block;">Affiliate</a>
-        <a class="dropdown-item" target="_blank" href="https://hocvienungdungai.com/id/logout" style="padding:8px 20px;display:block;">Đăng xuất</a>
-    </div>
-</div>
-<script>
-    // Toggle dropdown menu khi click vào tên
-    document.querySelector('.checklogin_ok .xinchao').onclick = function(e) {
-        e.stopPropagation();
-        var menu = this.nextElementSibling;
-        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-    };
-    document.addEventListener('click', function() {
-        var menu = document.querySelector('.checklogin_ok .dropdown-menu');
-        if(menu) menu.style.display = 'none';
-    });
-</script>
-                        
+
+                        <div class="mt-2 checklogin_ok" style="position:relative;">
+                            <a class="block xinchao" href="javascript:void(0)" style="font-weight:bold;">
+                            </a>
+                            <div class="dropdown-menu dropdown-info-user show"
+                                style="display:none;position:absolute;top:100%;left:-60px;min-width:180px;z-index:999;background:#fff;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,0.08);padding:8px 0;">
+                                <a class="dropdown-item" target="_blank"
+                                    href="https://hocvienungdungai.com/update-profile"
+                                    style="padding:8px 20px;display:block;">Hồ sơ</a>
+                                <a class="dropdown-item" target="_blank"
+                                    href="https://hocvienungdungai.com/list-test-result"
+                                    style="padding:8px 20px;display:block;">Kết quả BKT</a>
+                                <a class="dropdown-item" target="_blank"
+                                    href="https://hocvienungdungai.com/affiliate/dashboard"
+                                    style="padding:8px 20px;display:block;">Affiliate</a>
+                                <a class="dropdown-item" target="_blank" href="https://hocvienungdungai.com/id/logout"
+                                    style="padding:8px 20px;display:block;">Đăng xuất</a>
+                            </div>
+                        </div>
+                        <script>
+                            // Toggle dropdown menu khi click vào tên
+                            document.querySelector('.checklogin_ok .xinchao').onclick = function (e) {
+                                e.stopPropagation();
+                                var menu = this.nextElementSibling;
+                                menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+                            };
+                            document.addEventListener('click', function () {
+                                var menu = document.querySelector('.checklogin_ok .dropdown-menu');
+                                if (menu) menu.style.display = 'none';
+                            });
+                        </script>
+
                     </div>
                 </div>
             </div>
@@ -310,7 +322,7 @@
                 </div>
 
 
-                
+
 
             </div>
             <div class="border-t p-4">
@@ -330,7 +342,8 @@
                 </div>
                 <div id="dropdown-category-sidebar">
                     <div class="pb-4">
-                        <a class="flex gap-1.5 items-center" href="/"><i class="w-4 fa fa-home" aria-hidden="true"></i>
+                        <a class="flex gap-1.5 items-center" href="https://hocvienungdungai.com"><i
+                                class="w-4 fa fa-home" aria-hidden="true"></i>
                             Trang chủ</a>
                     </div>
                     <div class="pb-4">
@@ -351,50 +364,34 @@
                                 class="w-4 fa fa-building" aria-hidden="true"></i> Đào tạo Inhouse</a>
                     </div>
                     <div class="pb-4">
-                        <a class="flex gap-1.5 items-center" href="/news"><i class="w-4 fa fa-newspaper-o"
-                                aria-hidden="true"></i> Giải pháp Doanh nghiệp</a>
+                        <a class="flex gap-1.5 items-center" href="https://hocvienungdungai.com/"><i
+                                class="w-4 fa fa-newspaper-o" aria-hidden="true"></i> Giải pháp Doanh nghiệp</a>
                     </div>
                     <div class="pb-4">
-                        <a class="flex gap-1.5 items-center" href="/news"><i class="w-4 fa fa-newspaper-o"
-                                aria-hidden="true"></i> Tin Tức AI</a>
+                        <a class="flex gap-1.5 items-center" href="https://hocvienungdungai.com/"><i
+                                class="w-4 fa fa-newspaper-o" aria-hidden="true"></i> Tin Tức AI</a>
                     </div>
                     <div class="pb-4">
                         <div class="flex gap-1.5 items-center font-bold"><i class="w-4 fa fa-info-circle"
                                 aria-hidden="true"></i> Về Học Viện</div>
                         <div class="pl-7 flex flex-col gap-2 mt-2">
-                            <a class="flex gap-1.5 items-center" href="/lien-he"><i class="fa fa-angle-right"></i> Liên
+                            <a class="flex gap-1.5 items-center" href="https://hocvienungdungai.com"><i
+                                    class="fa fa-angle-right"></i> Liên
                                 hệ</a>
-                            <a class="flex gap-1.5 items-center" href="/thanh-toan"><i class="fa fa-angle-right"></i>
+                            <a class="flex gap-1.5 items-center" href="https://hocvienungdungai.com"><i
+                                    class="fa fa-angle-right"></i>
                                 Thanh toán</a>
-                            <a class="flex gap-1.5 items-center" href="/ve-hoc-vien"><i class="fa fa-angle-right"></i>
+                            <a class="flex gap-1.5 items-center" href="https://hocvienungdungai.com"><i
+                                    class="fa fa-angle-right"></i>
                                 Về Học Viện</a>
-                            <a class="flex gap-1.5 items-center" href="/ve-founder"><i class="fa fa-angle-right"></i> Về
+                            <a class="flex gap-1.5 items-center" href="https://hocvienungdungai.com"><i
+                                    class="fa fa-angle-right"></i> Về
                                 Founder</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="border-t px-4 py-6">
-                <a class="flex gap-2.5 items-center" href="/app">
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_418_5860)">
-                            <path
-                                d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z"
-                                fill="black" stroke="black" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M6 9L9 12L12 9" stroke="white" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M9 6V12" stroke="white" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_418_5860">
-                                <rect width="18" height="18" fill="white" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    Tải app </a>
-            </div>
+
             <div class="border-t p-4">
                 <p class="font-bold">Hỗ trợ</p>
                 <div class="py-4 flex gap-2.5 items-center">
@@ -591,7 +588,7 @@
     <!-- ...existing code... -->
     <div class="bg-[#F1F5F8] text-black">
         <main id="main" class="flex-shrink-0" role="main">
-            <div class="max-w-8xl mx-auto md:pt-4 pt-0" id="slide-menu-home">
+            <div class="max-w-8xl mx-auto md:pt-0 pt-0" id="slide-menu-home">
                 <div class="swiper bannerSwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -1494,12 +1491,11 @@
                 <div class="max-w-8xl mx-auto px-4 py-8">
                     <div id="HEADLINE_AI_INTRO" class="ladi-element ladi-animation">
 
-                        <h2 class="ladi-headline shine-text animate-gradient-text">Khám Phá Các Chương Trình Đào Tạo AI
-                            Qua Zoom</h2>
+                        <h2 class="ladi-headline shine-text animate-gradient-text">Chương Trình Đào Tạo Trực Tiếp Qua
+                            Zoom Online</h2>
 
                         <p class="ladi-paragraph">Học AI từ cơ bản đến nâng cao qua Zoom với hơn 10.000 giờ đào tạo,
-                            mang đến
-                            trải nghiệm học tập linh hoạt, bài bản và thực tiễn. </p>
+                            mang đến trải nghiệm học tập linh hoạt, bài bản và thực tiễn.</p>
                     </div>
 
                     <div id="GROUP_AI_COURSES" class="ladi-element">
@@ -1533,7 +1529,7 @@
                                 </div>
                             </div>
                             <div class="ladi-content">
-                                <h3 class="ladi-headline">GEN AI MASTERY</h3>
+                                <h3 class="ladi-headline">Truyền Nhân AI</h3>
                                 <p class="ladi-paragraph">
                                     AI thực chiến cấp độ chuyên gia.
                                     Chương trình siêu đặc biệt.
@@ -1556,7 +1552,7 @@
                                 </div>
                             </div>
                             <div class="ladi-content">
-                                <h3 class="ladi-headline">Ứng Dụng AI Agent</h3>
+                                <h3 class="ladi-headline">AI-AGent AIVA</h3>
                                 <p class="ladi-paragraph">
                                     Ứng dụng bộ trợ lý AIVA để X5 hiệu suất công việc.
                                     Tối ưu hệ thống kinh doanh với bộ trợ lý AI.
@@ -1720,7 +1716,7 @@
                     .ladi-content .ladi-paragraph {
                         font-size: 1rem;
                         color: #a3a3a3;
-                        height: 130px;
+                        height: 100px;
                         margin-top: 8px;
                     }
 
@@ -1961,6 +1957,8 @@
                             <div class="ladi-image-background"></div>
                         </div>
                     </div>
+
+
                 </div>
 
                 <style>
@@ -3009,6 +3007,156 @@
                 </style>
             </div>
 
+            <div class="section_video">
+                <div class="ladi-section" bis_skin_checked="1" style="
+    padding: 0px 0px 60px 0px;
+">
+                    <div class="ladi-container" bis_skin_checked="1">
+
+<div class="video-wrapper">
+  <div class="video-container">
+    <iframe 
+      width="100%" 
+      height="480" 
+      src="https://www.youtube.com/embed/CDVmvI4m95M?list=PLAzeP9b8Go6ZwjUkh99wKNVVWWIei1kzp" 
+      title="Toàn Cảnh AI Mình Master | Chương Trình Đào Tạo AI Thực Chiến" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin" 
+      allowfullscreen
+    ></iframe>
+    <div class="play-button">
+      <svg viewBox="0 0 24 24" class="play-icon">
+        <path d="M8 5v14l11-7z" fill="currentColor"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<style>
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 3px 7px 8px 9px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.video-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+iframe {
+  display: block;
+  border: none;
+}
+
+/* Play button styles */
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.play-button:hover {
+  background: #ff4d4d;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.play-icon {
+  width: 40px;
+  height: 40px;
+  color: #1782fb;
+}
+
+.play-button:hover .play-icon {
+  color: #fff;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .video-container {
+    max-width: 100%;
+  }
+  
+  iframe {
+    height: 360px;
+  }
+  
+  .play-button {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .play-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  iframe {
+    height: 240px;
+  }
+  
+  .play-button {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .play-icon {
+    width: 44px;
+    height: 44px;
+  }
+}
+</style>
+
+<script>
+document.querySelector('.play-button').addEventListener('click', function() {
+  const iframe = this.parentElement.querySelector('iframe');
+  iframe.src += '&autoplay=1';
+  this.style.display = 'none'; // Ẩn nút play sau khi click
+});
+</script>
+
+
+
+                    </div>
+                </div>
+            </div>
             <style>
                 span.inline-block.bg-blue-900.rounded-full.p-2 {
                     padding: 3px 10px;
@@ -3076,7 +3224,6 @@
                     margin-bottom: 20px;
                 }
             </style>
-
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-6" id="aff-teacher-home">
 
                 <h4 class="uppercase text-xl font-semibold mb-4 text-center shine-text animate-gradient-text">Giảng viên
@@ -3196,6 +3343,75 @@
                                 <img class="rounded-full w-full h-full object-cover ring-2 ring-blue-200 shadow-md lazyload"
                                     data-src="https://w.ladicdn.com/s500x500/5fae2a35ec210576f291f782/2-20241211083702-geamk.png"
                                     alt="Mai Anh" />
+                            </div>
+                        </div>
+
+                        <!-- Mai Anh -->
+                        <div
+                            class="swiper-slide flex flex-col items-center gap-3 border rounded-lg shadow p-4 bg-white min-h-[300px]">
+                            <div class="flex flex-col items-center gap-2 flex-grow">
+                                <a href="/teacher/maianh"
+                                    class="text-lg font-semibold text-[#273167] text-center hover:underline">Cao
+                                    Vương</a>
+                                <p class="text-md text-gray-900 text-center line-clamp-2">Chuyên Gia AI</p>
+                                <div class="flex justify-center gap-2">
+                                    <a href="#" class="bg-blue-700 rounded-full p-1.5 text-white hover:bg-blue-500"><i
+                                            class="fa fa-facebook"></i></a>
+                                    <a href="#" class="bg-green-700 rounded-full p-1.5 text-white hover:bg-green-500"><i
+                                            class="fa fa-envelope"></i></a>
+                                    <a href="#" class="bg-red-700 rounded-full p-1.5 text-white hover:bg-red-500"><i
+                                            class="fa fa-book"></i></a>
+                                </div>
+                            </div>
+                            <div class="relative w-100 h-100">
+                                <img class="rounded-full w-full h-full object-cover ring-2 ring-blue-200 shadow-md lazyload"
+                                    data-src="./images/gvcaovuong.png" alt="Mai Anh" />
+                            </div>
+                        </div>
+
+                        <!-- Mai Anh -->
+                        <div
+                            class="swiper-slide flex flex-col items-center gap-3 border rounded-lg shadow p-4 bg-white min-h-[300px]">
+                            <div class="flex flex-col items-center gap-2 flex-grow">
+                                <a href="/teacher/maianh"
+                                    class="text-lg font-semibold text-[#273167] text-center hover:underline">Tất
+                                    Kiêm</a>
+                                <p class="text-md text-gray-900 text-center line-clamp-2">Chuyên Gia AI Marketing</p>
+                                <div class="flex justify-center gap-2">
+                                    <a href="#" class="bg-blue-700 rounded-full p-1.5 text-white hover:bg-blue-500"><i
+                                            class="fa fa-facebook"></i></a>
+                                    <a href="#" class="bg-green-700 rounded-full p-1.5 text-white hover:bg-green-500"><i
+                                            class="fa fa-envelope"></i></a>
+                                    <a href="#" class="bg-red-700 rounded-full p-1.5 text-white hover:bg-red-500"><i
+                                            class="fa fa-book"></i></a>
+                                </div>
+                            </div>
+                            <div class="relative w-100 h-100">
+                                <img class="rounded-full w-full h-full object-cover ring-2 ring-blue-200 shadow-md lazyload"
+                                    data-src="./images/gvtatkiem.png" alt="Mai Anh" />
+                            </div>
+                        </div>
+
+                        <!-- Mai Anh -->
+                        <div
+                            class="swiper-slide flex flex-col items-center gap-3 border rounded-lg shadow p-4 bg-white min-h-[300px]">
+                            <div class="flex flex-col items-center gap-2 flex-grow">
+                                <a href="/teacher/maianh"
+                                    class="text-lg font-semibold text-[#273167] text-center hover:underline">Văn
+                                    Chính</a>
+                                <p class="text-md text-gray-900 text-center line-clamp-2">Chuyên Gia AI Marketing</p>
+                                <div class="flex justify-center gap-2">
+                                    <a href="#" class="bg-blue-700 rounded-full p-1.5 text-white hover:bg-blue-500"><i
+                                            class="fa fa-facebook"></i></a>
+                                    <a href="#" class="bg-green-700 rounded-full p-1.5 text-white hover:bg-green-500"><i
+                                            class="fa fa-envelope"></i></a>
+                                    <a href="#" class="bg-red-700 rounded-full p-1.5 text-white hover:bg-red-500"><i
+                                            class="fa fa-book"></i></a>
+                                </div>
+                            </div>
+                            <div class="relative w-100 h-100">
+                                <img class="rounded-full w-full h-full object-cover ring-2 ring-blue-200 shadow-md lazyload"
+                                    data-src="./images/gvvanchinh.png" alt="Mai Anh" />
                             </div>
                         </div>
                     </div>
@@ -3706,11 +3922,11 @@
                         <div class="basis-1/2 my-auto justify-end pb-4 lg:px-10">
                             <div class="md:text-[32px] text-lg font-bold  text-white md:mb-3 mb-4" style="
     line-height: 1.4;
-">Trở thành Giảng viên của chúng tôi</div>
+">Đăng ký Học tập AI miễn qua Zoom</div>
                             <p class="md:text-xl md:mb-7 mb-4 text-white ">Giúp mọi người trở nên tốt hơn - bao gồm cả
                                 chính bạn</p>
                             <a
-                                class="block md:w-fit mx-auto bg-[#1782FB] px-[21px] py-3.5 text-white uppercase rounded dangky">Đăng
+                                class="block md:w-fit mx-auto bg-[#1782FB] px-[21px] py-3.5 text-white uppercase rounded dangky1">Đăng
                                 ký ngay</a>
                         </div>
                     </div>
@@ -3787,24 +4003,22 @@
                         <div
                             class="swiper-slide flex flex-col items-center gap-3 border rounded-lg shadow p-4 bg-white min-h-[200px]">
                             <div class="flex flex-col items-center gap-2 flex-grow">
-                                <a href="/teacher/huonglan"
-                                    class="text-lg font-semibold text-[#273167] text-center hover:underline">Hương
-                                    Lan</a>
+                                <a href="#" class="text-lg font-semibold text-[#273167] text-center hover:underline">Thu
+                                    Hoài</a>
 
                                 <p class="text-md text-gray-900 text-center">SĐT: 0988268131</p>
 
                             </div>
                             <div class="relative w-32 h-32">
                                 <img class="rounded-full w-full h-full object-cover ring-2 ring-blue-200 shadow-md lazyload"
-                                    data-src="https://w.ladicdn.com/s500x500/5fae2a35ec210576f291f782/lanweb-20241219085747-qy1vc.png"
-                                    alt="Hương Lan" />
+                                    data-src="./images/cskh/thuhoai.jpg" alt="Hương Lan" />
                             </div>
                         </div>
                         <!-- Trang Linh -->
                         <div
                             class="swiper-slide flex flex-col items-center gap-3 border rounded-lg shadow p-4 bg-white min-h-[200px]">
                             <div class="flex flex-col items-center gap-2 flex-grow">
-                                <a href="/teacher/tranglinh"
+                                <a href="#"
                                     class="text-lg font-semibold text-[#273167] text-center hover:underline">Trang
                                     Linh</a>
 
@@ -3813,8 +4027,7 @@
                             </div>
                             <div class="relative w-32 h-32">
                                 <img class="rounded-full w-full h-full object-cover ring-2 ring-blue-200 shadow-md lazyload"
-                                    data-src="https://w.ladicdn.com/s500x500/5fae2a35ec210576f291f782/screenshot_1736053820-20250105051042-euiao.png"
-                                    alt="Trang Linh" />
+                                    data-src="./images/cskh/tranglinh.png" alt="Trang Linh" />
                             </div>
                         </div>
                         <!-- Hồng Vui -->
@@ -3830,33 +4043,15 @@
                             </div>
                             <div class="relative w-32 h-32">
                                 <img class="rounded-full w-full h-full object-cover ring-2 ring-blue-200 shadow-md lazyload"
-                                    data-src="https://w.ladicdn.com/s500x500/5fae2a35ec210576f291f782/vuiweb-20241219085750-k9eyr.png"
-                                    alt="Hồng Vui" />
+                                    data-src="./images/cskh/hongvui.png" alt="Hồng Vui" />
                             </div>
                         </div>
+
                         <!-- Ngọc Mai -->
                         <div
                             class="swiper-slide flex flex-col items-center gap-3 border rounded-lg shadow p-4 bg-white min-h-[200px]">
                             <div class="flex flex-col items-center gap-2 flex-grow">
-                                <a href="/teacher/ngocmai"
-                                    class="text-lg font-semibold text-[#273167] text-center hover:underline">Ngọc
-                                    Mai</a>
-
-                                <p class="text-md text-gray-900 text-center">SĐT: 0896101124</p>
-
-                            </div>
-                            <div class="relative w-32 h-32">
-                                <img class="rounded-full w-full h-full object-cover ring-2 ring-blue-200 shadow-md lazyload"
-                                    data-src="https://w.ladicdn.com/s500x500/5fae2a35ec210576f291f782/maiwweb1-20241219085904-lta3l.png"
-                                    alt="Ngọc Mai" />
-                            </div>
-                        </div>
-                        <!-- Ngọc Mai -->
-                        <div
-                            class="swiper-slide flex flex-col items-center gap-3 border rounded-lg shadow p-4 bg-white min-h-[200px]">
-                            <div class="flex flex-col items-center gap-2 flex-grow">
-                                <a href="/teacher/ngocmai"
-                                    class="text-lg font-semibold text-[#273167] text-center hover:underline">Thu
+                                <a href="#" class="text-lg font-semibold text-[#273167] text-center hover:underline">Thu
                                     Hoài</a>
 
                                 <p class="text-md text-gray-900 text-center">SĐT: 0969192308</p>
@@ -3864,10 +4059,10 @@
                             </div>
                             <div class="relative w-32 h-32">
                                 <img class="rounded-full w-full h-full object-cover ring-2 ring-blue-200 shadow-md lazyload"
-                                    data-src="https://w.ladicdn.com/s500x500/5fae2a35ec210576f291f782/screenshot_1736053820-20250105051042-euiao.png"
-                                    alt="Ngọc Mai" />
+                                    data-src="./images/cskh/ngocmai.png" alt="Ngọc Mai" />
                             </div>
                         </div>
+
                     </div>
                     <!-- Pagination -->
                     <div class="swiper-pagination"></div>
@@ -4012,8 +4207,8 @@
         <div class="max-w-7xl mx-auto xl:px-20 px-4 py-6">
             <div class="grid lg:grid-cols-2 md:grid-cols-2 gap-6 md:gap-0">
                 <div class="flex flex-col text-white">
-                    <a class="navbar-brand" href="/"><img class="img-responsive lazyload" data-src="./images/logo.png"
-                            alt="logo" style="height: 150px;"></a>
+                    <a class="navbar-brand" href="https://hocvienungdungai.com/"><img class="img-responsive lazyload"
+                            data-src="./images/logo.png" alt="logo" style="height: 150px;"></a>
                     <div class="mt-6 text-sm flex flex-col gap-4">
                         <p>Address: Tầng 9 tòa nhà Detech II, Số 107 Nguyễn Phong Sắc, Phường Dịch Vọng Hậu, Quận Cầu
                             Giấy, Thành phố Hà Nội.</p>
@@ -4380,6 +4575,18 @@
                     //popupSection.style.display = 'flex';
                 });
             });
+
+            const registerButtons1 = document.querySelectorAll('.dangky1');
+
+            // Thêm sự kiện click cho các nút đăng ký
+            registerButtons1.forEach(button => {
+                button.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    window.location.href = "https://www.huanluyentroly.ai.vn/ ";
+                    //popupSection.style.display = 'flex';
+                });
+            });
+
 
         });
     </script>
